@@ -27,6 +27,7 @@ def tutorial2():
     name = str(input("What is your name? :"))
     print("Ok {}, you have completed the tutorial.".format(name))
     print("The game will now begin.")
+    part1()
 
 
 def tutorial3():
@@ -44,5 +45,10 @@ def tutorial3():
     except:
         print("Invalid answer, try again.")
         tutorial3()
+
+def part1():
+    print("The clock on the wall ticks away.")
+    print("3 hours have passed since you arrived to depart from  airport.")
+    print("")
 
 tutorial1()
