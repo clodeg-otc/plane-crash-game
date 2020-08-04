@@ -59,35 +59,20 @@ def tutorial3():
 def part1sub1(name):
     print("\n")
     print("The clock on the wall ticks away.")
-    time.sleep(3)
     print("3 hours have passed since you arrived.")
-    time.sleep(3)
     print("Other than the occasional family rushing to catch their flight, you are alone.")
-    time.sleep(3)
     print("You glance over at the screen showing upcoming flights.")
-    time.sleep(3)
     print("One more hour.")
-    time.sleep(2)
     print("You wait, feeling as though your flight will never arrive.")
-    time.sleep(3)
     print("A robotic voice calmly announces;'flight 362 to arrive in 5 minutes.'")
-    time.sleep(3)
     print("'Please prepare for departure immediately.'")
-    time.sleep(3)
     print("Suddenly, masses of people start to flood through the entry way.")
-    time.sleep(3)
     print("By the time you pick up your items from the luggage collection point,")
-    time.sleep(3)
     print("The same robotic announcer says;'Plane 362 has arrived.'")
-    time.sleep(3)
     print("'Please make your way onto the plane.'")
-    time.sleep(3)
     print("You go through the metal detector, and come out without any trouble.")
-    time.sleep(3)
     print("Next, you make your way to the ticket issuer.")
-    time.sleep(3)
     print("With an authoratative tone of voice, he asks;")
-    time.sleep(3)
     print("'What part of the plane would you like to be seated in, {}?'".format(name))
     part1sub2()
 
@@ -99,18 +84,27 @@ def part1sub2():
             print("For future knowledge, try to get a seat on at the back of the plane next time.")
             print("It is proven that the chances of survival in the rear of the plane")
             print("are much higher than in the front.")
+            part1sub3()
         elif seat_choice == 2:
             print("You have chosen to sit in the middle of the plane.")
             print("This is a reasonable choice, however, the rear of the plane offers")
             print("a higher chance of survival in a plane crash.")
+            part1sub3()
         elif seat_choice == 3:
             print("You have chosen to sit in the back of the plane.")
             print("This is a great choice. In the rear of the plane,")
             print("chances of survival in a plane crash are proven to be")
             print("far higher.")
+            part1sub3()
         else:
             print("Invalid answer, try again.")
     except:
         print("Invalid answer, try again.")
+
+def part1sub3():
+    print("Ticket in hand, you make your way over to the docking port.")
+    print("You take a quick glance out the window, and notice gray clouds in the distance.")
+    print("The thought of danger quickly evades your mind.")
+
 
 tutorial1()
