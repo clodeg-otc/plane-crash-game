@@ -98,13 +98,29 @@ def part1sub2():
             part1sub3()
         else:
             print("Invalid answer, try again.")
+            part1sub2()
     except:
         print("Invalid answer, try again.")
+        part1sub2()
 
 def part1sub3():
     print("Ticket in hand, you make your way over to the docking port.")
     print("You take a quick glance out the window, and notice gray clouds in the distance.")
-    print("The thought of danger quickly evades your mind.")
+    part1sub4()
+
+def part1sub4():
+    try:
+        waitfornextflight = int(input("Should you wait for the next flight? yes(1) no(2) :"))
+        if waitfornextflight == 1:
+            part1sub5_TITLE_WAITINGFORNEXTFLIGHT()
+        elif waitfornextflight == 2:
+            part1sub5_TITLE_NOTWAITINGFORNEXTFLIGHT()
+        else:
+            print("Invalid answer, try again.")
+            part1sub4()
+    except:
+        print("Invalid answer, try again.")
+        part1sub4()
 
 
 tutorial1()
