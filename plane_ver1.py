@@ -122,5 +122,13 @@ def part1sub4():
         print("Invalid answer, try again.")
         part1sub4()
 
+def part1sub5_TITLE_WAITINGFORNEXTFLIGHT():
+    print("You decide that it is probably safest to wait.")
+    print("You don't want to fly in dangerous weather now, do you?")
+    print("You wait, for hours. Eventually, you board the next flight.")
+    print("As you're boarding, you look up at the announcement screen.")
+    print("The flight you had scheduled for crashed in the pacific, with only 26 survivors.")
+def part1sub5_TITLE_NOTWAITINGFORNEXTFLIGHT():
+    print("You decide not to wait.")
 
 tutorial1()
