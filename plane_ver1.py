@@ -1,19 +1,19 @@
 #THIS IS A TEST
 import time
-print("This game will inform you on how to better your chances of surviving a plane crash.")
-print("For more information, visit https://www.cbsnews.com/news/how-to-survive-a-plane-crash/")
-time.sleep(3)
-print("\n")
-print("How to survive a plane crash! (Created by Griffin Clode)")
-time.sleep(3)
-print("This game involves multiple choice questions.")
-time.sleep(3)
-print("To select one of the choices, you must choose the number that is assigned to that choice.")
-time.sleep(3)
-print("A test question will now be asked.")
-time.sleep(3)
 
 def tutorial1():
+    print("This game will inform you on how to better your chances of surviving a plane crash.")
+    print("For more information, visit https://www.cbsnews.com/news/how-to-survive-a-plane-crash/")
+    time.sleep(3)
+    print("\n")
+    print("How to survive a plane crash! (Created by Griffin Chode)")
+    time.sleep(3)
+    print("This game involves multiple choice questions.")
+    time.sleep(3)
+    print("To select one of the choices, you must choose the number that is assigned to that choice.")
+    time.sleep(3)
+    print("A test question will now be asked.")
+    time.sleep(3)
     try:
         test1 = int(input("Would you like to play the game? yes(1) no(2) :"))
         if test1 == 1:
@@ -128,7 +128,25 @@ def part1sub5_TITLE_WAITINGFORNEXTFLIGHT():
     print("You wait, for hours. Eventually, you board the next flight.")
     print("As you're boarding, you look up at the announcement screen.")
     print("The flight you had scheduled for crashed in the pacific, with only 26 survivors.")
+    print("Sometimes, the best preventative action you can take")
+    print("is to simply get a different flight, depending on the conditions.")
+
 def part1sub5_TITLE_NOTWAITINGFORNEXTFLIGHT():
     print("You decide not to wait.")
+
+#PlayAgain
+def playagain():
+    try:
+        restart = int(input("Would you like to replay the game? yes(1) no(2) :"))
+        if restart == 1:
+            print("Restarting...")
+            tutorial1()
+        elif restart == 2:
+            print("Quitting...")
+            exit()
+        else:
+            print("Invalid answer, try again.")
+    except:
+        print("Invalid answer, try again.")
 
 tutorial1()
