@@ -8,6 +8,9 @@ def playtutorial():
     print("For more information, visit https://www.cbsnews.com/news/how-to-survive-a-plane-crash/")
     print("\n")
     print("How to survive a plane crash! (Created by Griffin Chode)")
+    playtutorial1()
+
+def playtutorial1():
     try:
         playtutorialchoice = int(input("Would you like to go play through the tutorial? yes(1) no(2) :"))
         if playtutorialchoice == 1:
@@ -18,8 +21,10 @@ def playtutorial():
             tutorial2()
         else:
             print("Invalid answer, try again.")
-    except TypeError:
+            playtutorial1()
+    except:
         print("Invalid answer, try again.")
+        playtutorial1()
 
 
 def tutorial1():
@@ -37,7 +42,7 @@ def tutorial1():
         else:
             print("Invalid answer, try again.")
             tutorial1()
-    except TypeError:
+    except:
         print("Invalid answer, try again.")
         tutorial1()
 
@@ -61,7 +66,7 @@ def tutorial3():
         else:
             print("Invalid answer, try again.")
             tutorial3()
-    except TypeError:
+    except:
         print("Invalid answer, try again.")
         tutorial3()
 
@@ -109,10 +114,10 @@ def part1sub2(name):
             part1sub3back(name)
         else:
             print("Invalid answer, try again.")
-            part1sub2()
-    except TypeError:
+            part1sub2(name)
+    except:
         print("Invalid answer, try again.")
-        part1sub2()
+        part1sub2(name)
 
 
 def part1sub3front(name):
@@ -126,10 +131,10 @@ def part1sub3front(name):
             part1sub5_title_notwaitingfornextflightfront(name)
         else:
             print("Invalid answer, try again.")
-            part1sub3front()
-    except TypeError:
+            part1sub3front(name)
+    except:
         print("Invalid answer, try again.")
-        part1sub3front()
+        part1sub3front(name)
 
 
 def part1sub3middle(name):
@@ -143,10 +148,10 @@ def part1sub3middle(name):
             part1sub5_title_notwaitingfornextflightmiddle(name)
         else:
             print("Invalid answer, try again.")
-            part1sub3middle()
-    except TypeError:
+            part1sub3middle(name)
+    except:
         print("Invalid answer, try again.")
-        part1sub3middle()
+        part1sub3middle(name)
 
 
 def part1sub3back(name):
@@ -160,10 +165,10 @@ def part1sub3back(name):
             part1sub5_title_notwaitingfornextflightback(name)
         else:
             print("Invalid answer, try again.")
-            part1sub3back()
-    except TypeError:
+            part1sub3back(name)
+    except :
         print("Invalid answer, try again.")
-        part1sub3back()
+        part1sub3back(name)
 
 
 def part1sub5_title_waitingfornextflight():
@@ -183,6 +188,7 @@ def part1sub5_title_notwaitingfornextflightfront(name):
     print("A flight attendant greets you as you board the plane.")
     print("Good morning {}, please make your way to the front of the plane.".format(name))
     print("Your seat number is {}.".format(seat_numberfront))
+    playagain()
 
 
 def part1sub5_title_notwaitingfornextflightmiddle(name):
@@ -191,6 +197,7 @@ def part1sub5_title_notwaitingfornextflightmiddle(name):
     print("A flight attendant greets you as you board the plane.")
     print("Good morning {}, please make your way to the middle of the plane.".format(name))
     print("Your seat number is {}.".format(seat_numbermiddle))
+    playagain()
 
 
 def part1sub5_title_notwaitingfornextflightback(name):
@@ -199,6 +206,7 @@ def part1sub5_title_notwaitingfornextflightback(name):
     print("A flight attendant greets you as you board the plane.")
     print("Good morning {}, please make your way to the back of the plane.".format(name))
     print("Your seat number is {}.".format(seat_numberback))
+    playagain()
 
 
 # PlayAgain
@@ -212,9 +220,11 @@ def playagain():
             print("Quitting...")
             exit()
         else:
-            print("Invalid answer, try again.")
+            print("1Invalid answer, try again.")
+            playagain()
     except TypeError:
-        print("Invalid answer, try again.")
+        print("2Invalid answer, try again.")
+        playagain()
 
 
 playtutorial()
