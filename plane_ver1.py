@@ -85,6 +85,10 @@ def tutorial3():
 
 
 def part1sub1(name):
+    print("GAME START")
+    time.sleep(3)
+    print("PART 1: WAITING FOR THE PLANE")
+    time.sleep(3)
     print("\n")
     print("The clock on the wall ticks away.")
     time.sleep(3)
@@ -269,6 +273,8 @@ def part1sub5_title_notwaitingfornextflightback(name):
     part2sub1(name)
 
 def part2sub1(name):
+    print("PART 2: THE PLANE")
+    time.sleep(3)
     print("You make yourself comfortable in your seat.")
     time.sleep(3)
     print("The plane begins to take off with a large rumbling sound.")
@@ -348,13 +354,26 @@ def part2sub3():
             time.sleep(3)
             print("You manage to get to the toilet and relieve yourself.")
             time.sleep(3)
-            playagain()
+            part2sub4()
         else:
             print("17Invalid answer, try again.")
             part2sub3()
     except:
         print("18Invalid answer, try again.")
         part2sub3()
+
+def part2sub4():
+    print("You make your way back to your seat.")
+    print("You go to grab your water, but the plane starts to shake.")
+    print("It stops for a moment. What is going on?")
+    print("A large BOOM comes from the right wing of the plane.")
+    print("You look out the window and see the wing; IT'S ON FIRE!?!?")
+    print("The plane begins to decline towards the ground;")
+    print("Oxygen masks fall from the roof of the plane,")
+    print("and the pilots announce that everyone should prepare for impact.")
+    print("You are about to crash into the ocean.")
+    print("What are you going to do?")
+    part2sub4choice1 = int(input("")
 
 # PlayAgain
 def playagain():
