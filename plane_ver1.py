@@ -372,6 +372,8 @@ def part2sub4():
     print("Oxygen masks fall from the roof of the plane,")
     print("and the pilots announce that everyone should prepare for impact.")
     print("You are about to crash into the ocean.")
+    print("The pilots, in an obviously panicked state,")
+    print("ask all passengers to ")
     print("What are you going to do?")
     part2sub4choice1 = int(input("")
 
