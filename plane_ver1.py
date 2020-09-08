@@ -27,7 +27,7 @@ def playtutorial1():
         else:
             print("1Invalid answer, try again.")
             playtutorial1()
-    except:
+    except ValueError:
         print("2Invalid answer, try again.")
         playtutorial1()
 
@@ -52,7 +52,7 @@ def tutorial1():
         else:
             print("3Invalid answer, try again.")
             tutorial1()
-    except:
+    except ValueError:
         print("4Invalid answer, try again.")
         tutorial1()
 
@@ -79,7 +79,7 @@ def tutorial3():
         else:
             print("5Invalid answer, try again.")
             tutorial3()
-    except:
+    except ValueError:
         print("6Invalid answer, try again.")
         tutorial3()
 
@@ -155,7 +155,7 @@ def part1sub2(name):
         else:
             print("7Invalid answer, try again.")
             part1sub2(name)
-    except:
+    except ValueError:
         print("8Invalid answer, try again.")
         part1sub2(name)
 
@@ -174,7 +174,7 @@ def part1sub3front(name):
         else:
             print("9Invalid answer, try again.")
             part1sub3front(name)
-    except:
+    except ValueError:
         print("10Invalid answer, try again.")
         part1sub3front(name)
 
@@ -193,7 +193,7 @@ def part1sub3middle(name):
         else:
             print("11Invalid answer, try again.")
             part1sub3middle(name)
-    except:
+    except ValueError:
         print("12Invalid answer, try again.")
         part1sub3middle(name)
 
@@ -212,7 +212,7 @@ def part1sub3back(name):
         else:
             print("13Invalid answer, try again.")
             part1sub3back(name)
-    except:
+    except ValueError:
         print("14Invalid answer, try again.")
         part1sub3back(name)
 
@@ -327,7 +327,7 @@ def part2sub2():
         else:
             print("15Invalid answer, try again.")
             part2sub2()
-    except:
+    except ValueError:
         print("16Invalid answer, try again.")
         part2sub2()
 
@@ -358,7 +358,7 @@ def part2sub3():
         else:
             print("17Invalid answer, try again.")
             part2sub3()
-    except:
+    except ValueError:
         print("18Invalid answer, try again.")
         part2sub3()
 
@@ -373,9 +373,36 @@ def part2sub4():
     print("and the pilots announce that everyone should prepare for impact.")
     print("You are about to crash into the ocean.")
     print("The pilots, in an obviously panicked state,")
-    print("ask all passengers to ")
+    print("ask all passengers to stay seated, for their safety.")
     print("What are you going to do?")
-    part2sub4choice1 = int(input("")
+    print("Stay seated, or go to see what is going on?")
+    part3sub1()
+
+def part3sub1():
+    part2sub4choice1 = int(input("Stay seated(1) Get up(2)? :"))
+    try:
+        if part2sub4choice1 == 1:
+            print("You remain in your seat.")
+            print("As you decline towards the ground,")
+            print("the sudden feeling of death fills your mind.")
+            print("You are going to die.")
+            print("Suddenly, the pilot makes another announcement.")
+            print("'This is the captain.'")
+            print("'Brace for impact.'")
+            print("Suddenly it becomes very clear.")
+            print("You need to prepare for what you're going to do when you hit the water.")
+            print("LOOK! an emergency manual is slotted in the side of your chair.")
+            print("You pick it up, quickly reading over it 2 or 3 times,")
+            print("before bracing in your chair.")
+            print("You hold onto the seat belt, clutching for your life.")
+            print("")
+            playagain()
+        elif part2sub4choice1 == 2:
+            print("You get out of your seat, and rush towards")
+            print("the flight attendant.")
+            print("'What's going on!?!?' you ask.")
+            print("'The right plane wing caught on fire!'")
+            print("'")
 
 # PlayAgain
 def playagain():
@@ -390,7 +417,7 @@ def playagain():
         else:
             print("15Invalid answer, try again.")
             playagain()
-    except TypeError:
+    except ValueError:
         print("16Invalid answer, try again.")
         playagain()
 
