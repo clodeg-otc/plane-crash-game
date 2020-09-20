@@ -379,7 +379,7 @@ def part2sub4():
     part3sub1()
 
 def part3sub1():
-    part2sub4choice1 = int(input("Stay seated(1) Get up(2)? :"))
+    part2sub4choice1 = int(input("Stay seated(1) Get up(2) :"))
     try:
         if part2sub4choice1 == 1:
             print("You remain in your seat.")
@@ -394,16 +394,42 @@ def part3sub1():
             print("LOOK! an emergency manual is slotted in the side of your chair.")
             print("You pick it up, quickly reading over it 2 or 3 times,")
             print("before bracing in your chair.")
-            print("You hold onto the seat belt, clutching for your life.")
-            print("")
-            playagain()
+            print("You hold onto the seat belt, clutching for your life...")
+            print("The impact from hitting the surface of the ocean")
+            print("knocks you out, rendering you unconscious.")
+            print("You awaken to the plane burning from the inside.")
+            print("Its aluminium frame crumbles, dissolving very quickly.")
+            print("Having the knowledge you have from the emergency manual,")
+            print("You make your way to the emergency exit door.")
+            print("A woman attempts to open it, but you can see that she is pulling")
+            print("it incorrectly, making it impossible for her to open it.")
+            print("You walk up to her, and shout over the flames,")
+            print("'You have to do pull the mechanism down!'")
+            print("You pull it down, and make your way out of the plane.")
+            print("You jump onto a life raft.")
+            print("Time goes by, for what seems like hours.")
+            print("Eventually, emergency services make it out to you.")
+            print("Well done. You survived.")
+            index()
         elif part2sub4choice1 == 2:
-            print("You get out of your seat, and rush towards")
-            print("the flight attendant.")
+            print("You get out of your seat, and rush towards the flight attendant.")
             print("'What's going on!?!?' you ask.")
             print("'The right plane wing caught on fire!'")
-            print("'")
+            print("'You need to get back in your seat!'")
+            print("")
+        else:
+            print("19Invalid answer, try again.")
+            part3sub1()
+    except ValueError:
+        print("20Invalid answer, try again.")
+        part3sub1()
 
+def index():
+    print("All the information you need to know from this game will be stated now:")
+    print("(1) The survival rate of plane crashes is approximately 95.7%")
+    print("(2) When you hit the water, on average you have approximately 90 seconds to get out of the plane")
+    print(" - This is because the aluminium fuselage in the plane burns very quickly.")
+    print("(3) ")
 # PlayAgain
 def playagain():
     try:
