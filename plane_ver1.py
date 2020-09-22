@@ -426,10 +426,11 @@ def part3sub1():
 
 def index():
     print("All the information you need to know from this game will be stated now:")
-    print("(1) The survival rate of plane crashes is approximately 95.7%")
-    print("(2) When you hit the water, on average you have approximately 90 seconds to get out of the plane")
-    print(" - This is because the aluminium fuselage in the plane burns very quickly.")
-    print("(3) ")
+    print("(1): The survival rate of plane crashes is approximately 95.7%")
+    print("(2): When you hit the water, on average you have approximately 90 seconds to get out of the plane")
+    print("  (This is because the aluminium fuselage in the plane burns very quickly).")
+    print("(3): When in a plane crash situation, read the emergency manual supplied, and listen to the flight attendants")
+    print("(4) Brace for impact, in the SAFETY POSITION (Check website https://www.cbsnews.com/news/how-to-survive-a-plane-crash/)")
 # PlayAgain
 def playagain():
     try:
