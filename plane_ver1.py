@@ -28,7 +28,7 @@ def playtutorial1():
             print("1Invalid answer, try again.")
             playtutorial1()
     except ValueError:
-        print("2Invalid answer, try again.")
+        print("Invalid answer, try again.")
         playtutorial1()
 
 
@@ -50,10 +50,10 @@ def tutorial1():
         elif test1 == 2:
             tutorial3()
         else:
-            print("3Invalid answer, try again.")
+            print("Invalid answer, try again.")
             tutorial1()
     except ValueError:
-        print("4Invalid answer, try again.")
+        print("Invalid answer, try again.")
         tutorial1()
 
 
@@ -77,16 +77,15 @@ def tutorial3():
             time.sleep(3)
             tutorial1()
         else:
-            print("5Invalid answer, try again.")
+            print("Invalid answer, try again.")
             tutorial3()
     except ValueError:
-        print("6Invalid answer, try again.")
+        print("Invalid answer, try again.")
         tutorial3()
 
 
 def part1sub1(name):
-    print("GAME START")
-    time.sleep(3)
+    print("\n")
     print("PART 1: WAITING FOR THE PLANE")
     time.sleep(3)
     print("\n")
@@ -131,9 +130,10 @@ def part1sub2(name):
         if seat_choice == 1:
             print("You have chosen to sit in the front of the plane.")
             time.sleep(3)
-            print("For future knowledge, try to get a seat on at the back of the plane next time.")
+            print("For future knowledge, try to get a seat at the back of the plane next time.")
             time.sleep(3)
             print("It is proven that the chances of survival in the rear of the plane")
+            time.sleep(3)
             print("are much higher than in the front.")
             time.sleep(3)
             part1sub3front(name)
@@ -141,6 +141,7 @@ def part1sub2(name):
             print("You have chosen to sit in the middle of the plane.")
             time.sleep(3)
             print("This is a reasonable choice, however, the rear of the plane offers")
+            time.sleep(3)
             print("a higher chance of survival in a plane crash.")
             time.sleep(3)
             part1sub3middle(name)
@@ -148,15 +149,17 @@ def part1sub2(name):
             print("You have chosen to sit in the back of the plane.")
             time.sleep(3)
             print("This is a great choice. In the rear of the plane,")
+            time.sleep(3)
             print("chances of survival in a plane crash are proven to be")
-            print("far higher.")
+            time.sleep(3)
+            print("far higher than anywhere else.")
             time.sleep(3)
             part1sub3back(name)
         else:
-            print("7Invalid answer, try again.")
+            print("Invalid answer, try again.")
             part1sub2(name)
     except ValueError:
-        print("8Invalid answer, try again.")
+        print("Invalid answer, try again.")
         part1sub2(name)
 
 
@@ -175,7 +178,7 @@ def part1sub3front(name):
             print("9Invalid answer, try again.")
             part1sub3front(name)
     except ValueError:
-        print("10Invalid answer, try again.")
+        print("Invalid answer, try again.")
         part1sub3front(name)
 
 
@@ -191,10 +194,10 @@ def part1sub3middle(name):
         elif waitfornextflight == 2:
             part1sub5_title_notwaitingfornextflightmiddle(name)
         else:
-            print("11Invalid answer, try again.")
+            print("Invalid answer, try again.")
             part1sub3middle(name)
     except ValueError:
-        print("12Invalid answer, try again.")
+        print("Invalid answer, try again.")
         part1sub3middle(name)
 
 
@@ -210,10 +213,10 @@ def part1sub3back(name):
         elif waitfornextflight == 2:
             part1sub5_title_notwaitingfornextflightback(name)
         else:
-            print("13Invalid answer, try again.")
+            print("Invalid answer, try again.")
             part1sub3back(name)
     except ValueError:
-        print("14Invalid answer, try again.")
+        print("Invalid answer, try again.")
         part1sub3back(name)
 
 
@@ -240,9 +243,9 @@ def part1sub5_title_notwaitingfornextflightfront(name):
     time.sleep(3)
     print("A flight attendant greets you as you board the plane.")
     time.sleep(3)
-    print("Good morning {}, please make your way to the front of the plane.".format(name))
+    print("'Good morning {}, please make your way to the front of the plane.'".format(name))
     time.sleep(3)
-    print("Your seat number is section A, {}.".format(seat_numberfront))
+    print("'Your seat allocation is section A, {}.'".format(seat_numberfront))
     time.sleep(3)
     part2sub1(name)
 
@@ -253,9 +256,9 @@ def part1sub5_title_notwaitingfornextflightmiddle(name):
     time.sleep(3)
     print("A flight attendant greets you as you board the plane.")
     time.sleep(3)
-    print("Good morning {}, please make your way to the middle of the plane.".format(name))
+    print("'Good morning {}, please make your way to the middle of the plane.'".format(name))
     time.sleep(3)
-    print("Your seat number is section B, {}.".format(seat_numbermiddle))
+    print("'Your seat allocation is section B, {}.'".format(seat_numbermiddle))
     time.sleep(3)
     part2sub1(name)
 
@@ -266,14 +269,17 @@ def part1sub5_title_notwaitingfornextflightback(name):
     time.sleep(3)
     print("A flight attendant greets you as you board the plane.")
     time.sleep(3)
-    print("Good morning {}, please make your way to the back of the plane.".format(name))
+    print("'Good morning {}, please make your way to the back of the plane.'".format(name))
     time.sleep(3)
-    print("Your seat number is section C, {}.".format(seat_numberback))
+    print("'Your seat allocation is section C, {}.'".format(seat_numberback))
     time.sleep(3)
     part2sub1(name)
 
 def part2sub1(name):
+    print("\n")
     print("PART 2: THE PLANE")
+    print("Warning: Unrealistic gameplay ahead [JUST FOR THIS PART])")
+    print("\n")
     time.sleep(3)
     print("You make yourself comfortable in your seat.")
     time.sleep(3)
@@ -319,16 +325,17 @@ def part2sub2():
             print("You dodge to the right...")
             time.sleep(3)
             print("Hitting an old lady on her way to ask the flight attendant")
+            time.sleep(3)
             print("if she could have a choco bikkie.")
             time.sleep(3)
             print("You trample over her.")
             time.sleep(3)
             part2sub3()
         else:
-            print("15Invalid answer, try again.")
+            print("Invalid answer, try again.")
             part2sub2()
     except ValueError:
-        print("16Invalid answer, try again.")
+        print("Invalid answer, try again.")
         part2sub2()
 
 def part2sub3():
@@ -356,26 +363,43 @@ def part2sub3():
             time.sleep(3)
             part2sub4()
         else:
-            print("17Invalid answer, try again.")
+            print("Invalid answer, try again.")
             part2sub3()
     except ValueError:
-        print("18Invalid answer, try again.")
+        print("Invalid answer, try again.")
         part2sub3()
 
 def part2sub4():
+    print("\n")
+    print("PART 3: THE CRASH")
+    print("\n")
+    time.sleep(3)
     print("You make your way back to your seat.")
+    time.sleep(3)
     print("You go to grab your water, but the plane starts to shake.")
+    time.sleep(3)
     print("It stops for a moment. What is going on?")
+    time.sleep(3)
     print("A large BOOM comes from the right wing of the plane.")
+    time.sleep(3)
     print("You look out the window and see the wing; IT'S ON FIRE!?!?")
+    time.sleep(3)
     print("The plane begins to decline towards the ground;")
+    time.sleep(3)
     print("Oxygen masks fall from the roof of the plane,")
+    time.sleep(3)
     print("and the pilots announce that everyone should prepare for impact.")
+    time.sleep(3)
     print("You are about to crash into the ocean.")
+    time.sleep(3)
     print("The pilots, in an obviously panicked state,")
+    time.sleep(3)
     print("ask all passengers to stay seated, for their safety.")
+    time.sleep(3)
     print("What are you going to do?")
+    time.sleep(3)
     print("Stay seated, or go to see what is going on?")
+    time.sleep(3)
     part3sub1()
 
 def part3sub1():
@@ -383,57 +407,104 @@ def part3sub1():
     try:
         if part2sub4choice1 == 1:
             print("You remain in your seat.")
+            time.sleep(3)
             print("As you decline towards the ground,")
+            time.sleep(3)
             print("the sudden feeling of death fills your mind.")
+            time.sleep(3)
             print("You are going to die.")
+            time.sleep(3)
             print("Suddenly, the pilot makes another announcement.")
+            time.sleep(3)
             print("'This is the captain.'")
+            time.sleep(3)
             print("'Brace for impact.'")
+            time.sleep(3)
             print("Suddenly it becomes very clear.")
+            time.sleep(3)
             print("You need to prepare for what you're going to do when you hit the water.")
+            time.sleep(3)
             print("LOOK! an emergency manual is slotted in the side of your chair.")
+            time.sleep(3)
             print("You pick it up, quickly reading over it 2 or 3 times,")
+            time.sleep(3)
             print("before bracing in your chair.")
+            time.sleep(3)
             print("You hold onto the seat belt, clutching for your life...")
+            time.sleep(3)
             print("The impact from hitting the surface of the ocean")
+            time.sleep(3)
             print("knocks you out, rendering you unconscious.")
+            time.sleep(3)
             print("You awaken to the plane burning from the inside.")
+            time.sleep(3)
             print("Its aluminium frame crumbles, dissolving very quickly.")
+            time.sleep(3)
             print("Having the knowledge you have from the emergency manual,")
+            time.sleep(3)
             print("You make your way to the emergency exit door.")
+            time.sleep(3)
             print("A woman attempts to open it, but you can see that she is pulling")
+            time.sleep(3)
             print("it incorrectly, making it impossible for her to open it.")
+            time.sleep(3)
             print("You walk up to her, and shout over the flames,")
-            print("'You have to do pull the mechanism down!'")
+            time.sleep(3)
+            print("'You have to pull the mechanism down!'")
+            time.sleep(3)
             print("You pull it down, and make your way out of the plane.")
+            time.sleep(3)
             print("You jump onto a life raft.")
+            time.sleep(3)
             print("Time goes by, for what seems like hours.")
+            time.sleep(3)
             print("Eventually, emergency services make it out to you.")
+            time.sleep(3)
             print("Well done. You survived.")
+            time.sleep(3)
             index()
         elif part2sub4choice1 == 2:
             print("You get out of your seat, and rush towards the flight attendant.")
+            time.sleep(3)
             print("'What's going on!?!?' you ask.")
+            time.sleep(3)
             print("'The right plane wing caught on fire!'")
+            time.sleep(3)
             print("'You need to get back in your seat!'")
+            time.sleep(3)
             print("")
         else:
-            print("19Invalid answer, try again.")
+            print("Invalid answer, try again.")
             part3sub1()
     except ValueError:
-        print("20Invalid answer, try again.")
+        print("Invalid answer, try again.")
         part3sub1()
 
 def index():
-    print("All the information you need to know from this game will be stated now:")
-    print("(1): The survival rate of plane crashes is approximately 95.7%")
-    print("(2): When you hit the water, on average you have approximately 90 seconds to get out of the plane")
-    print("  (This is because the aluminium fuselage in the plane burns very quickly).")
-    print("(3): When in a plane crash situation, read the emergency manual supplied, and listen to the flight attendants")
-    print("(4) Brace for impact, in the SAFETY POSITION (Check website https://www.cbsnews.com/news/how-to-survive-a-plane-crash/)")
+    print("\n")
+    print("INDEX:")
+    print("\n")
+    time.sleep(3)
+    print("(1): The survival rate of plane crashes is approximately 95.7%.")
+    time.sleep(3)
+    print("(2): When you hit the water, on average you have approximately 90 seconds to get out of the plane.")
+    time.sleep(3)
+    print("(This is because the aluminium fuselage in the plane burns very quickly).")
+    time.sleep(3)
+    print("(3): When in a plane crash situation, read the emergency manual supplied, and listen to the flight attendants.")
+    time.sleep(3)
+    print("(4) Brace for impact in the SAFETY POSITION (Check website https://www.cbsnews.com/news/how-to-survive-a-plane-crash/)")
+    time.sleep(3)
+    print("(5): Watch the conditions before you hop on; It may be safer to get a later flight.")
+    time.sleep(3)
+    print("(6): Try to get a seat in the back of the plane, as this will increase your chances of survival.")
+    time.sleep(3)
+    playagain()
+
 # PlayAgain
 def playagain():
     try:
+        print("\n")
         restart = int(input("Would you like to replay the game? yes(1) no(2) :"))
         if restart == 1:
             print("Restarting...")
@@ -442,10 +513,10 @@ def playagain():
             print("Quitting...")
             quit()
         else:
-            print("15Invalid answer, try again.")
+            print("Invalid answer, try again.")
             playagain()
     except ValueError:
-        print("16Invalid answer, try again.")
+        print("Invalid answer, try again.")
         playagain()
 
 playtutorial()
