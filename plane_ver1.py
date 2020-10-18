@@ -1,5 +1,8 @@
 # THIS IS A TEST
+import itertools
+import threading
 import time
+import sys
 import random
 
 
@@ -17,8 +20,26 @@ def playtutorial1():
     try:
         playtutorialchoice = int(input("Would you like to go play through the tutorial? yes(1) no(2) :"))
         if playtutorialchoice == 1:
-            print("Ok.")
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
             time.sleep(3)
+            done = True
+            # animation
+            time.sleep(2)
+            print("")
             tutorial1()
         elif playtutorialchoice == 2:
             print("Ok.")
@@ -420,7 +441,7 @@ def part3sub1():
             time.sleep(3)
             print("'Brace for impact.'")
             time.sleep(3)
-            print("Suddenly it becomes very clear.")
+            print("Suddenly everything becomes very clear.")
             time.sleep(3)
             print("You need to prepare for what you're going to do when you hit the water.")
             time.sleep(3)
@@ -470,7 +491,9 @@ def part3sub1():
             time.sleep(3)
             print("'The right plane wing caught on fire!'")
             time.sleep(3)
-            print("'You need to get back in your seat!'")
+            print("'You need to get back in your seat!' says the flight attendant.")
+            time.sleep(3)
+            print("You ignore her; the plane rumbles violently, tossing you over a seat.")
             time.sleep(3)
             print("")
         else:
@@ -520,3 +543,4 @@ def playagain():
         playagain()
 
 playtutorial()
+
