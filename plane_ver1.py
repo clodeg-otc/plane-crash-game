@@ -16,6 +16,7 @@ def playtutorial():
     time.sleep(3)
     playtutorial1()
 
+
 def playtutorial1():
     try:
         playtutorialchoice = int(input("Would you like to go play through the tutorial? yes(1) no(2) :"))
@@ -42,13 +43,73 @@ def playtutorial1():
             print("")
             tutorial1()
         elif playtutorialchoice == 2:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(3)
+            done = True
+            # animation
+            time.sleep(2)
+            print("")
             print("Ok.")
             time.sleep(3)
-            tutorial2()
+            tutorial3()
         else:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(3)
+            done = True
+            # animation
+            time.sleep(2)
+            print("")
             print("1Invalid answer, try again.")
             playtutorial1()
     except ValueError:
+        # animation
+        done = False
+
+        def animate():
+            for c in itertools.cycle(['...', '..', '.']):
+                if done:
+                    break
+                sys.stdout.write('\rloading ' + c)
+                sys.stdout.flush()
+                time.sleep(0.1)
+            sys.stdout.write('\rAnswer verified.')
+
+        t = threading.Thread(target=animate)
+        t.start()
+        # long process here
+        time.sleep(3)
+        done = True
+        # animation
+        time.sleep(2)
+        print("")
         print("Invalid answer, try again.")
         playtutorial1()
 
@@ -63,24 +124,124 @@ def tutorial1():
     try:
         test1 = int(input("Would you like to play the game? yes(1) no(2) :"))
         if test1 == 1:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(3)
+            done = True
+            # animation
+            time.sleep(2)
+            print("")
             print("Great.")
             time.sleep(3)
             print("Next, your name will be asked.")
             time.sleep(3)
             tutorial2()
         elif test1 == 2:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(3)
+            done = True
+            # animation
+            time.sleep(2)
+            print("")
             tutorial3()
         else:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(3)
+            done = True
+            # animation
+            time.sleep(2)
+            print("")
             print("Invalid answer, try again.")
             tutorial1()
     except ValueError:
+        # animation
+        done = False
+
+        def animate():
+            for c in itertools.cycle(['...', '..', '.']):
+                if done:
+                    break
+                sys.stdout.write('\rloading ' + c)
+                sys.stdout.flush()
+                time.sleep(0.1)
+            sys.stdout.write('\rAnswer verified.')
+
+        t = threading.Thread(target=animate)
+        t.start()
+        # long process here
+        time.sleep(3)
+        done = True
+        # animation
+        time.sleep(2)
+        print("")
         print("Invalid answer, try again.")
         tutorial1()
 
 
 def tutorial2():
     name = str(input("What is your name? :"))
-    print("Ok {}, you have completed the tutorial.".format(name))
+    # animation
+    done = False
+
+    def animate():
+        for c in itertools.cycle(['...', '..', '.']):
+            if done:
+                break
+            sys.stdout.write('\rloading ' + c)
+            sys.stdout.flush()
+            time.sleep(0.1)
+        sys.stdout.write('\rAnswer verified.')
+
+    t = threading.Thread(target=animate)
+    t.start()
+    # long process here
+    time.sleep(3)
+    done = True
+    # animation
+    time.sleep(2)
+    print("")
+    print("Ok {}, you have completed the introduction.".format(name))
     time.sleep(3)
     print("The game will now begin.")
     time.sleep(3)
@@ -92,7 +253,27 @@ def tutorial3():
         exit1 = int(input("Are you sure? yes(1) no(2) :"))
         if exit1 == 1:
             print("Ok, exiting game.")
-            exit
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(3)
+            done = True
+            # animation
+            time.sleep(2)
+            print("")
+            exit()
         elif exit1 == 2:
             print("Ok, you will now be redirected to the last question.")
             time.sleep(3)
@@ -296,6 +477,7 @@ def part1sub5_title_notwaitingfornextflightback(name):
     time.sleep(3)
     part2sub1(name)
 
+
 def part2sub1(name):
     print("\n")
     print("PART 2: THE PLANE")
@@ -331,6 +513,7 @@ def part2sub1(name):
     print("go left to get around them, or right?")
     part2sub2()
 
+
 def part2sub2():
     part2sub2choice1 = int(input("left(1) right(2) :"))
     try:
@@ -358,6 +541,7 @@ def part2sub2():
     except ValueError:
         print("Invalid answer, try again.")
         part2sub2()
+
 
 def part2sub3():
     print("The flight attendant is in your way!")
@@ -389,6 +573,7 @@ def part2sub3():
     except ValueError:
         print("Invalid answer, try again.")
         part2sub3()
+
 
 def part2sub4():
     print("\n")
@@ -422,6 +607,7 @@ def part2sub4():
     print("Stay seated, or go to see what is going on?")
     time.sleep(3)
     part3sub1()
+
 
 def part3sub1():
     part2sub4choice1 = int(input("Stay seated(1) Get up(2) :"))
@@ -503,6 +689,7 @@ def part3sub1():
         print("Invalid answer, try again.")
         part3sub1()
 
+
 def index():
     print("\n")
     print("INDEX:")
@@ -514,15 +701,18 @@ def index():
     time.sleep(3)
     print("(This is because the aluminium fuselage in the plane burns very quickly).")
     time.sleep(3)
-    print("(3): When in a plane crash situation, read the emergency manual supplied, and listen to the flight attendants.")
+    print(
+        "(3): When in a plane crash situation, read the emergency manual supplied, and listen to the flight attendants.")
     time.sleep(3)
-    print("(4) Brace for impact in the SAFETY POSITION (Check website https://www.cbsnews.com/news/how-to-survive-a-plane-crash/)")
+    print(
+        "(4) Brace for impact in the SAFETY POSITION (Check website https://www.cbsnews.com/news/how-to-survive-a-plane-crash/)")
     time.sleep(3)
     print("(5): Watch the conditions before you hop on; It may be safer to get a later flight.")
     time.sleep(3)
     print("(6): Try to get a seat in the back of the plane, as this will increase your chances of survival.")
     time.sleep(3)
     playagain()
+
 
 # PlayAgain
 def playagain():
@@ -542,5 +732,5 @@ def playagain():
         print("Invalid answer, try again.")
         playagain()
 
-playtutorial()
 
+playtutorial()
