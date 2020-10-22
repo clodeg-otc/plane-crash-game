@@ -36,11 +36,11 @@ def playtutorial1():
             t = threading.Thread(target=animate)
             t.start()
             # long process here
-            time.sleep(3)
+            time.sleep(2)
             done = True
-            # animation
             time.sleep(2)
             print("")
+            # animation
             tutorial1()
         elif playtutorialchoice == 2:
             # animation
@@ -58,13 +58,11 @@ def playtutorial1():
             t = threading.Thread(target=animate)
             t.start()
             # long process here
-            time.sleep(3)
+            time.sleep(2)
             done = True
             # animation
             time.sleep(2)
             print("")
-            print("Ok.")
-            time.sleep(3)
             tutorial3()
         else:
             # animation
@@ -82,7 +80,7 @@ def playtutorial1():
             t = threading.Thread(target=animate)
             t.start()
             # long process here
-            time.sleep(3)
+            time.sleep(2)
             done = True
             # animation
             time.sleep(2)
@@ -105,7 +103,7 @@ def playtutorial1():
         t = threading.Thread(target=animate)
         t.start()
         # long process here
-        time.sleep(3)
+        time.sleep(2)
         done = True
         # animation
         time.sleep(2)
@@ -139,13 +137,11 @@ def tutorial1():
             t = threading.Thread(target=animate)
             t.start()
             # long process here
-            time.sleep(3)
+            time.sleep(2)
             done = True
             # animation
             time.sleep(2)
             print("")
-            print("Great.")
-            time.sleep(3)
             print("Next, your name will be asked.")
             time.sleep(3)
             tutorial2()
@@ -165,7 +161,7 @@ def tutorial1():
             t = threading.Thread(target=animate)
             t.start()
             # long process here
-            time.sleep(3)
+            time.sleep(2)
             done = True
             # animation
             time.sleep(2)
@@ -187,7 +183,7 @@ def tutorial1():
             t = threading.Thread(target=animate)
             t.start()
             # long process here
-            time.sleep(3)
+            time.sleep(2)
             done = True
             # animation
             time.sleep(2)
@@ -210,7 +206,7 @@ def tutorial1():
         t = threading.Thread(target=animate)
         t.start()
         # long process here
-        time.sleep(3)
+        time.sleep(2)
         done = True
         # animation
         time.sleep(2)
@@ -236,7 +232,7 @@ def tutorial2():
     t = threading.Thread(target=animate)
     t.start()
     # long process here
-    time.sleep(3)
+    time.sleep(2)
     done = True
     # animation
     time.sleep(2)
@@ -268,20 +264,78 @@ def tutorial3():
             t = threading.Thread(target=animate)
             t.start()
             # long process here
-            time.sleep(3)
+            time.sleep(2)
             done = True
-            # animation
             time.sleep(2)
             print("")
+            # animation
             exit()
         elif exit1 == 2:
-            print("Ok, you will now be redirected to the last question.")
-            time.sleep(3)
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             tutorial1()
         else:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rloading ' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rAnswer verified.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             print("Invalid answer, try again.")
             tutorial3()
     except ValueError:
+        # animation
+        done = False
+
+        def animate():
+            for c in itertools.cycle(['...', '..', '.']):
+                if done:
+                    break
+                sys.stdout.write('\rloading ' + c)
+                sys.stdout.flush()
+                time.sleep(0.1)
+            sys.stdout.write('\rAnswer verified.')
+
+        t = threading.Thread(target=animate)
+        t.start()
+        # long process here
+        time.sleep(2)
+        done = True
+        time.sleep(2)
+        print("")
+        # animation
         print("Invalid answer, try again.")
         tutorial3()
 
@@ -330,6 +384,26 @@ def part1sub2(name):
     try:
         seat_choice = int(input("Front of the plane(1) Middle of the plane(2) Back of the plane(3) :"))
         if seat_choice == 1:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             print("You have chosen to sit in the front of the plane.")
             time.sleep(3)
             print("For future knowledge, try to get a seat at the back of the plane next time.")
@@ -340,6 +414,26 @@ def part1sub2(name):
             time.sleep(3)
             part1sub3front(name)
         elif seat_choice == 2:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             print("You have chosen to sit in the middle of the plane.")
             time.sleep(3)
             print("This is a reasonable choice, however, the rear of the plane offers")
@@ -348,6 +442,26 @@ def part1sub2(name):
             time.sleep(3)
             part1sub3middle(name)
         elif seat_choice == 3:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             print("You have chosen to sit in the back of the plane.")
             time.sleep(3)
             print("This is a great choice. In the rear of the plane,")
@@ -358,9 +472,49 @@ def part1sub2(name):
             time.sleep(3)
             part1sub3back(name)
         else:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             print("Invalid answer, try again.")
             part1sub2(name)
     except ValueError:
+        # animation
+        done = False
+
+        def animate():
+            for c in itertools.cycle(['...', '..', '.']):
+                if done:
+                    break
+                sys.stdout.write('\rRedirecting to last question' + c)
+                sys.stdout.flush()
+                time.sleep(0.1)
+            sys.stdout.write('\rComplete.')
+
+        t = threading.Thread(target=animate)
+        t.start()
+        # long process here
+        time.sleep(2)
+        done = True
+        time.sleep(2)
+        print("")
+        # animation
         print("Invalid answer, try again.")
         part1sub2(name)
 
@@ -373,13 +527,93 @@ def part1sub3front(name):
     try:
         waitfornextflight = int(input("Should you wait for the next flight? yes(1) no(2) :"))
         if waitfornextflight == 1:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             part1sub5_title_waitingfornextflight()
         elif waitfornextflight == 2:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             part1sub5_title_notwaitingfornextflightfront(name)
         else:
-            print("9Invalid answer, try again.")
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
+            print("Invalid answer, try again.")
             part1sub3front(name)
     except ValueError:
+        # animation
+        done = False
+
+        def animate():
+            for c in itertools.cycle(['...', '..', '.']):
+                if done:
+                    break
+                sys.stdout.write('\rRedirecting to last question' + c)
+                sys.stdout.flush()
+                time.sleep(0.1)
+            sys.stdout.write('\rComplete.')
+
+        t = threading.Thread(target=animate)
+        t.start()
+        # long process here
+        time.sleep(2)
+        done = True
+        time.sleep(2)
+        print("")
+        # animation
         print("Invalid answer, try again.")
         part1sub3front(name)
 
@@ -392,13 +626,93 @@ def part1sub3middle(name):
     try:
         waitfornextflight = int(input("Should you wait for the next flight? yes(1) no(2) :"))
         if waitfornextflight == 1:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             part1sub5_title_waitingfornextflight()
         elif waitfornextflight == 2:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             part1sub5_title_notwaitingfornextflightmiddle(name)
         else:
+            # animation
+            done = False
+
+            def animate():
+                for c in itertools.cycle(['...', '..', '.']):
+                    if done:
+                        break
+                    sys.stdout.write('\rRedirecting to last question' + c)
+                    sys.stdout.flush()
+                    time.sleep(0.1)
+                sys.stdout.write('\rComplete.')
+
+            t = threading.Thread(target=animate)
+            t.start()
+            # long process here
+            time.sleep(2)
+            done = True
+            time.sleep(2)
+            print("")
+            # animation
             print("Invalid answer, try again.")
             part1sub3middle(name)
     except ValueError:
+        # animation
+        done = False
+
+        def animate():
+            for c in itertools.cycle(['...', '..', '.']):
+                if done:
+                    break
+                sys.stdout.write('\rRedirecting to last question' + c)
+                sys.stdout.flush()
+                time.sleep(0.1)
+            sys.stdout.write('\rComplete.')
+
+        t = threading.Thread(target=animate)
+        t.start()
+        # long process here
+        time.sleep(2)
+        done = True
+        time.sleep(2)
+        print("")
+        # animation
         print("Invalid answer, try again.")
         part1sub3middle(name)
 
@@ -411,6 +725,7 @@ def part1sub3back(name):
     try:
         waitfornextflight = int(input("Should you wait for the next flight? yes(1) no(2) :"))
         if waitfornextflight == 1:
+
             part1sub5_title_waitingfornextflight()
         elif waitfornextflight == 2:
             part1sub5_title_notwaitingfornextflightback(name)
