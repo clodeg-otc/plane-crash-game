@@ -879,7 +879,7 @@ def part1sub5_title_notwaitingfornextflightback(name):
 def part2sub1(name):
     print("\n")
     print("PART 2: THE PLANE")
-    print("Warning: Unrealistic gameplay ahead [JUST FOR THIS PART])")
+    print("Warning: Unrealistic gameplay ahead (JUST FOR THIS PART)")
     print("\n")
     time.sleep(3)
     print("You make yourself comfortable in your seat.")
@@ -909,6 +909,7 @@ def part2sub1(name):
     print("children are in your way!")
     time.sleep(3)
     print("go left to get around them, or right?")
+    time.sleep(3)
     part2sub2()
 
 
@@ -1279,7 +1280,15 @@ def part3sub1():
             time.sleep(3)
             print("You ignore her; the plane rumbles violently, tossing you over a seat.")
             time.sleep(3)
-            print("")
+            print("'BRACE!' the captain yells over the intercom.")
+            time.sleep(3)
+            print("The plane hits the water.")
+            time.sleep(3)
+            print("Because you weren't in your seat, you died upon impact.")
+            time.sleep(3)
+            print("Next time, listen to the flight attendants")
+            time.sleep(3)
+            index()
         else:
             # animation
             done = False
